@@ -12,18 +12,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: Text("Contoh Button")),
-        body: Row (
+        body: Row(
           children: [
             Container(
-              child: Text(
-                'BERITA TERBARU',
-                style: TextStyle(fontSize: 18, color: Colors.black
-              )),
-            )
+              child: Text('BERITA TERBARU',
+                  style: TextStyle(fontSize: 18, color: Colors.black)),
+            ),
+            Container(
+              child: Text('BERITA TERBARU',
+                  style: TextStyle(fontSize: 18, color: Colors.black)),
+            ),
           ],
-          
         ),
-      ),    
+      ),
     );
   }
 }
