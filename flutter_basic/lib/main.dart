@@ -1,28 +1,32 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
+import 'widgets/topMenu.dart';
+import 'widgets/mainNews.dart';
+import 'widgets/news.dart';
 
+void main() => runApp(MyApp());
+
+//--gridview--
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(title: Text("Contoh Button")),
-        body: Row(
-          children: [
-            Container(
-              child: Text('BERITA TERBARU',
-                  style: TextStyle(fontSize: 18, color: Colors.black)),
+        appBar: AppBar(title: Text("MyApp"), backgroundColor: Colors.red),
+        body: SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.all(8),
+            child: Column(
+              children: <Widget>[
+                TopMenu(),
+                MainNews(),
+                News(),
+                News(),
+                News(),
+              ],
             ),
-            Container(
-              child: Text('BERITA TERBARU',
-                  style: TextStyle(fontSize: 18, color: Colors.black)),
-            ),
-          ],
+          ),
         ),
       ),
     );
