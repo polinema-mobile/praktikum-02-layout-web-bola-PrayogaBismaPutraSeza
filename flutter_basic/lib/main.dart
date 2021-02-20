@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'widgets/topMenu.dart';
+import 'widgets/mainNews.dart';
+import 'widgets/news.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,6 +20,10 @@ class MyApp extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 TopMenu(),
+                MainNews(),
+                News(),
+                News(),
+                News(),
               ],
             ),
           ),
